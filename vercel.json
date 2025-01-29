@@ -2,14 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "server/package.json",
+      "src": "src/Backend/package.json",
       "use": "@vercel/node",
       "config": {
         "includeFiles": ["server/**"]
       }
     },
     {
-      "src": "client/package.json",
+      "src": "src/package.json",
       "use": "@vercel/static-build",
       "config": {
         "distDir": "dist"
