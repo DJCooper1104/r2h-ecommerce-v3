@@ -19,6 +19,7 @@ const db = mysql.createConnection({
   user: process.env.DB_USER, // Database username
   password: process.env.DB_PASSWORD, // Database password
   database: process.env.DB_NAME, // Database name
+  port: process.env.DB_PORT,
 });
 
 // Define a GET route for the root URL ("/")
