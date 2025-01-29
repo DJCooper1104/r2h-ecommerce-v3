@@ -27,7 +27,15 @@ app.get("/", (req, res) => {
 });
 
 // Define a GET route for the "/jewelry" endpoint
-app.get("https://e-commerce-react-k7eb.onrender.com/jewelry", (req, res) => {
+// app.get("https://e-commerce-react-k7eb.onrender.com/jewelry", (req, res) => {
+//   const sql = "SELECT * FROM jewelry"; // SQL query to select all rows from the 'jewelry' table
+//   db.query(sql, (err, data) => {
+//     if (err) return res.json(err); // If there's an error, respond with the error
+//     return res.json(data); // Otherwise, respond with the query result
+//   });
+// });
+
+app.get("/jewelry", (req, res) => {
   const sql = "SELECT * FROM jewelry"; // SQL query to select all rows from the 'jewelry' table
   db.query(sql, (err, data) => {
     if (err) return res.json(err); // If there's an error, respond with the error
