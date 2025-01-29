@@ -21,7 +21,6 @@ const db = mysql.createConnection({
   database: process.env.DB_NAME, // Database name
   port: process.env.DB_PORT,
 });
-
 // Define a GET route for the root URL ("/")
 app.get("/", (req, res) => {
   return res.json("From Backend Side"); // Respond with a JSON message
